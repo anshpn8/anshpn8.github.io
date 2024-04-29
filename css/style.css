@@ -27,7 +27,7 @@ body{
     background-color: aliceblue;
     padding: 2rem;
     border-radius: .5rem;
-    min-height: 45vh;
+    /* min-height: 45vh; */
     width: 40%;
 
 }
@@ -96,7 +96,7 @@ form button{
     background-color:aliceblue;
     padding: 2rem;
     border-radius: .5rem;
-    min-height: 45vh;
+    /* min-height: 45vh; */
     width: 40vh;
     width: 40%;
     margin-right: 200rem auto;
