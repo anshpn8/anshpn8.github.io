@@ -108,10 +108,8 @@ btn1.addEventListener("click", async (evt) =>{
     document.getElementById("country").innerHTML =`Country : ${detailsArr.country}`;
     document.getElementById("city").innerHTML =`City : ${detailsArr.city}`;
     document.getElementById("postcode").innerHTML =`Postal Code : ${detailsArr.postcode}`;
-    document.getElementById("county").innerHTML =`Tahsil : ${detailsArr.county}`;
     document.getElementById("street").innerHTML =`Street : ${detailsArr.street}`;
     document.getElementById("state_district").innerHTML =`District State : ${detailsArr.state_district}`;
-    document.getElementById("housenumber").innerHTML =`House Number : ${detailsArr.housenumber}`;
   });
   
 
