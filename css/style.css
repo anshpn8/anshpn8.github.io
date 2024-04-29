@@ -19,8 +19,8 @@ body{
 
 nav {
     display: flex;
-    justify-content: space-between;
-    justify-items: space-between;
+    justify-content: space-around;
+    justify-items: center;
 }
 
 
