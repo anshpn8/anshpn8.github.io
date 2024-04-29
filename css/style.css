@@ -4,10 +4,8 @@
 }
 
 body{
-    
-    
+    justify-content: center; 
     align-items: center;
-    min-height: 100vh;
     background-color: rgb(66, 98, 112);
     
 }
@@ -15,7 +13,7 @@ body{
 
 .container-card{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
