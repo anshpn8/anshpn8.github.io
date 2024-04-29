@@ -97,7 +97,7 @@ form button{
     padding: 2rem;
     border-radius: .5rem;
     /* min-height: 45vh; */
-    width: 40vh;
+    /* width: 40vh; */
     width: 40%;
     margin-right: 200rem auto;
     justify-content: space-between;
