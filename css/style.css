@@ -12,8 +12,8 @@ body{
 
 .search-item{
     display: flex;
-    justify-content: space-between;
-    justify-items: center;
+    justify-content: flex-end;
+    justify-items: flex-end;
     width: 20%;
 }
 
