@@ -18,7 +18,7 @@ body{
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
     justify-items: auto;
-    margin: 20%;
+    
 }
 
 
@@ -98,6 +98,7 @@ form button{
     border-radius: .5rem;
     min-height: 45vh;
     width: 40vh;
+    margin-right: 200rem auto;
     justify-content: space-between;
 }
 
