@@ -10,7 +10,7 @@ body{
     
 }
 
-.search-btn{
+.search-item{
     display: flex;
     justify-content: space-between;
     justify-items: center;
