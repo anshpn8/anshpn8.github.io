@@ -45,6 +45,7 @@ nav {
     height: 60%;
     width: 60%;
     margin: 20vh;
+    flex-wrap: wrap;
 }
 
 form{
