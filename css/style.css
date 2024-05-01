@@ -42,8 +42,8 @@ nav {
     padding: 2rem;
     border-radius: .5rem;
     /* min-height: 45vh; */
-    height: 50%;
-    width: 35%;
+    height: 60%;
+    width: 45%;
     margin: 20vh;
 }
 
@@ -111,12 +111,10 @@ form button{
     background-color:aliceblue;
     padding: 2rem;
     border-radius: .5rem;
-    /* min-height: 45vh; */
-    /* width: 40vh; */
-    height: 50%;
-    width: 35%;
+    justify-content: center;
+    height: 60%;
+    width: 45%;
     margin: 20vh;
-    justify-content: space-evenly;
 }
 
 .container-weather h3{
