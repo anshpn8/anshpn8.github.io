@@ -44,7 +44,8 @@ nav {
     /* min-height: 45vh; */
     height: 60%;
     width: 45%;
-    margin: 10vh;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
     flex-wrap: wrap;
 }
 
@@ -115,7 +116,8 @@ form button{
     justify-content: center;
     height: 60%;
     width: 45%;
-    margin: 10vh;
+    margin-left: 10vh;
+    margin-bottom: 10vh;
 }
 
 .container-weather h3{
