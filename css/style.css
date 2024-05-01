@@ -9,7 +9,11 @@ body{
     background-color: rgb(66, 98, 112);
     
 }
-
+a {
+    text-decoration: none;
+    color: black;
+    ;
+}
 .search-item{
     display: flex;
     justify-content: space-evenly;
@@ -27,8 +31,8 @@ nav {
 .container-card{
     display: flex;
     flex-wrap: wrap;
-    
-    
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
     justify-items: auto;
@@ -42,11 +46,9 @@ nav {
     padding: 2rem;
     border-radius: .5rem;
     /* min-height: 45vh; */
-    
+    height: 50%;
     width: 35%;
-    margin-left: 10vh;
-    margin-bottom: 10vh;
-    flex-wrap: wrap;
+    margin: 20vh;
 }
 
 form{
@@ -113,11 +115,12 @@ form button{
     background-color:aliceblue;
     padding: 2rem;
     border-radius: .5rem;
-    justify-content: center;
-    
+    /* min-height: 45vh; */
+    /* width: 40vh; */
+    height: 50%;
     width: 35%;
-    margin-left: 10vh;
-    margin-bottom: 10vh;
+    margin: 20vh;
+    justify-content: space-evenly;
 }
 
 .container-weather h3{
