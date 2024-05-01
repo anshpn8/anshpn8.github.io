@@ -43,7 +43,7 @@ nav {
     border-radius: .5rem;
     /* min-height: 45vh; */
     
-    width: 45%;
+    width: 35%;
     margin-left: 10vh;
     margin-bottom: 10vh;
     flex-wrap: wrap;
@@ -115,7 +115,7 @@ form button{
     border-radius: .5rem;
     justify-content: center;
     
-    width: 45%;
+    width: 35%;
     margin-left: 10vh;
     margin-bottom: 10vh;
 }
