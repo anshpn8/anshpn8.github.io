@@ -27,7 +27,7 @@ nav {
 .container-card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
     
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
