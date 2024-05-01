@@ -26,7 +26,8 @@ nav {
 
 .container-card{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
@@ -43,9 +44,7 @@ nav {
     /* min-height: 45vh; */
     height: 50%;
     width: 35%;
-    margin-left: 20vh;
-    margin-right: 20vh;
-
+    margin: 20vh;
 }
 
 form{
@@ -116,7 +115,7 @@ form button{
     /* width: 40vh; */
     height: 50%;
     width: 35%;
-    margin-right: 20vh;
+    margin: 20vh;
     justify-content: space-evenly;
 }
 
