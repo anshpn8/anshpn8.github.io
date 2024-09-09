@@ -29,7 +29,6 @@ nav {
 
 
 .container-card{
-    
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -37,7 +36,6 @@ nav {
     min-height: 100vh;
     background-color: rgb(66, 98, 112);
     justify-items: auto;
-    
 }
 
 
@@ -53,6 +51,27 @@ nav {
     width: auto;
     margin-bottom: 10vh;
 }
+
+.container-weather {
+    background-color:aliceblue;
+    padding: 2rem;
+    border-radius: .5rem;
+    /* min-height: 45vh; */
+    /* width: 40vh; */
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin-bottom: 10vh;
+    justify-content: space-evenly;
+}
+
+
+.container-weather h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 3, 31);
+}
+
 
 form{
     margin: 2rem 0 1rem 0;
@@ -110,26 +129,4 @@ form button{
     align-items: center;
     height: 3rem;
     background-color: #af4d98;
-}
-
-
-
-.container-weather {
-    background-color:aliceblue;
-    padding: 2rem;
-    border-radius: .5rem;
-    /* min-height: 45vh; */
-    /* width: 40vh; */
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    margin-bottom: 10vh;
-    justify-content: space-evenly;
-}
-
-
-.container-weather h3{
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(3, 3, 31);
 }
