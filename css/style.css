@@ -128,7 +128,17 @@ form button{
     justify-content: space-evenly;
 }
 
-.container-weather h3,h4,h5{
+.container-weather h3{
+
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 3, 31);
+}
+.container-weather h4{
+
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 3, 31);
+}
+.container-weather h5{
 
     font-family: 'Times New Roman', Times, serif;
     color: rgb(3, 3, 31);
