@@ -121,10 +121,9 @@ form button{
     /* min-height: 45vh; */
     /* width: 40vh; */
     height: 50%;
-  
-    width: 35%;
-    margin-left: 5vh;
-    margin-right: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
     margin-bottom: 10vh;
     justify-content: space-evenly;
 }
