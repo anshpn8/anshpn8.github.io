@@ -58,10 +58,7 @@ const cardData =[
     {heading: 'Dot Net Development', body: 'We develope the web application using MVC with Dot Net'},
     {heading: 'Flutter Software Developer', body: 'The cross-plateform application is build using this Framework'},
     {heading: 'Node.js Software Developer', body: 'This framework is use to run the javaScript code anyWhere in the environment'}
- // Add more posts here...
 ]
-
-
 const postContainer= document.querySelector('#serviceadd');
 const postMethods =()=>{
 cardData.map((postData)=> {
