@@ -77,4 +77,4 @@ postElement.innerHTML=`
 postContainer.appendChild(postElement);
 })
 }
-postMethods()
+postMethods();
