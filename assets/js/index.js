@@ -48,3 +48,36 @@ const postMethod1 =()=>{
         });
 }
 postMethod1();
+
+
+const cardData =[
+    {heading: 'Front Development', body: 'We use REACT, BootStrap,JQuery for dynamic and Interactive website.'},
+    {heading: 'React JS', body: 'This Framework used by us for the single page application for faster loading.'},
+    {heading: 'Web Development', body: 'We develope the complete website and Run on the surver as reqirement.'},
+    {heading: 'Java Software Developer', body: 'We have created some project using Spring, Hibernate'},
+    {heading: 'Dot Net Development', body: 'We develope the web application using MVC with Dot Net'},
+    {heading: 'Flutter Software Developer', body: 'The cross-plateform application is build using this Framework'},
+    {heading: 'Node.js Software Developer', body: 'This framework is use to run the javaScript code anyWhere in the environment'}
+ // Add more posts here...
+]
+
+
+const postContainer= document.querySelector('#serviceadd');
+const postMethods =()=>{
+cardData.map((postData)=> {
+const postElement= document.createElement('div');
+postElement.classList.add('col-lg-4');
+postElement.classList.add('col-md-6');
+postElement.classList.add('mb-4');
+postElement.innerHTML=`
+                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
+                            <i class="bi fs-1 bi-boxes"></i>
+                            <h5 class="mt-3 fs-6 fw-bold">${postData.heading}</h5>
+                            <p>${postData.body}</p>
+                       </div>
+`;
+
+postContainer.appendChild(postElement);
+})
+}
+postMethods()

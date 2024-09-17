@@ -141,56 +141,9 @@
                     <p>There are the some useful services provided by me or my personal team members.</p>
                 </div>
                 
-                <div class="row mt-5">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">Front Development</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar magna ut bibendum imperdiet</p>
-                       </div>
-                    </div>
-                    
-                     <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">React JS</h5>
-                            <p>We develope the fast and efficent Web pages so that it can load and look beautiful on the websits. 
-                                The web pages created using React fast and Dynamic</p>
-                       </div>
-                    </div>
-                    
-                     <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">Web Development</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar magna ut bibendum imperdiet</p>
-                       </div>
-                    </div>
-                    
-                     <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">Java Software Developer</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar magna ut bibendum imperdiet</p>
-                       </div>
-                    </div>
-                    
-                     <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">Dot Net Development</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar magna ut bibendum imperdiet</p>
-                       </div>
-                    </div>
-                    
-                     <div class="col-lg-4 col-md-6 mb-4">
-                       <div class="serv-cove shadow-md rounded bg-white text-center p-4">
-                            <i class="bi fs-1 bi-boxes"></i>
-                            <h5 class="mt-3 fs-6 fw-bold">Data Base Administrator</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar magna ut bibendum imperdiet</p>
-                       </div>
-                    </div>
-                </div>
+                <div id="serviceadd" class="row mt-5">
+
+                </div> 
                 
             </div>
             
@@ -199,7 +152,7 @@
             <div id="portfolio" class="service px-4 bg-white py-5">
                  <div class="titie-row row mb-3">
                     <h2 class="fw-bolder">Projects</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+                    <p>There are some projects given below :</p>
                 </div>
                 <div class="row mt-5">
                     <div class="col-lg-4 col-md-6 mb-4">
@@ -383,34 +336,6 @@
         </div>
    
 </body>
-<script>
-
-const { google } = require('googleapis');
-    let url='https://script.google.com/macros/s/AKfycbyY5umHbCw4pkozH-MjdaDn4rGxqlkskd984uKT7mO6pSuA9_6pFtUOKpuzOtNSZXo53g/exec'; 
-    let form = document.querySelector('#form');
-    form.addEventListener("submit",(e)=>{
-    e.target.btnsub.innerHtml="Submitting";
-        e.preventDefault();
-        let d=new FormData(form);
-        fetch(url,{
-            method: "POST",
-            body: d
-        }).then((res)=>res.text())
-        .then((finalRes)=>{
-            console.log(finalRes);
-        });
-    });
-    function saveDataToGoogleSheet(data) {
-  // Set up the Google Sheets API
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  
-  // Set the range to write the data to
-  var range = sheet.getRange(sheet.getLastRow() + 1, 1, data.length, data[0].length);
-  
-  // Write the data to the sheet
-  range.setValues(data);
-}
-</script>
 <script src="assets/js/index.js"></script>
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
