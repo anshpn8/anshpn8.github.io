@@ -15,6 +15,7 @@ const postMethod1 =()=>{
         postElement1.classList.add('col-lg-4');
         postElement1.classList.add('col-md-6');
         postElement1.classList.add('mb-4');
+        postElement1.classList.add('d-flex');
         postElement1.innerHTML=`
                                 <div class="serv-cove shadow-md rounded bg-white p-3">
                                      <div class="prf row mb-3">
