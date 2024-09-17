@@ -139,6 +139,7 @@
                     <h2 class="fw-bolder">Services</h2>
                     <p>There are the some useful services provided by me or my personal team members.</p>
                 </div>
+                
                 <div class="row mt-5">
                     <div class="col-lg-4 col-md-6 mb-4">
                        <div class="serv-cove shadow-md rounded bg-white text-center p-4">
@@ -189,6 +190,7 @@
                        </div>
                     </div>
                 </div>
+                
             </div>
             
              <!--########################## Portfolio Starts Here ############################# -->
@@ -245,8 +247,10 @@
                     <h2 class="fw-bolder">Testimonial</h2>
                     <p>My friends to develope the software.</p>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-lg-4 col-md-6 mb-4">
+               
+              <div id="testid" class="row mt-5 d-flex">
+                 <!--  <div class="cards1">
+                        <div class="col-lg-4 col-md-6 mb-4">
                        <div class="serv-cove shadow-md rounded bg-white p-3">
                             <div class="prf row mb-3">
                                 <div class="col-md-3">
@@ -266,13 +270,15 @@
                                         
                                         <div class="col-md-9 align-self-center px-2">
                                             <ul>
-                                              <li><a class="col-md-9 align-self-center px-2" href="mailto:anandkumar73@gmail.com" class="links" id="emailLink">anandkumar73@gmail.com</a></li> 
+                                              <li><a class="col-md-9 align-self-center px-2" href="mailto:anandkumarpatelmrj@gmail.com" class="links" id="emailLink">anandkumarpatelmrj@gmail.com</a></li> 
                                         </ul>
                                         </div> 
                                     </div>
                             </div>
                        </div>
                     </div>
+                </div>
+
                     
                     <div class="col-lg-4 col-md-6 mb-4">
                        <div class="serv-cove shadow-md rounded bg-white p-3">
@@ -294,7 +300,7 @@
                                     
                                     <div class="col-md-9 align-self-center px-2">
                                         <ul>
-                                          <li><a class="col-md-9 align-self-center px-2" href="mailto:amansharma202@gmail.com" class="links" id="emailLink">amansharma202@gmail.com</a></li> 
+                                          <li><a class="col-md-9 align-self-center px-2" href="mailto:amansharma200033@gmail.com" class="links" id="emailLink">amansharma200033@gmail.com</a></li> 
                                     </ul>
                                     </div> 
                                 </div>
@@ -361,7 +367,7 @@
                             </div>
                        </div>
                     </div>
-                     
+                      -->
                 </div>
             </div>
             
@@ -498,6 +504,10 @@
 
 
 <script>
+
+const { google } = require('googleapis');
+
+
     let url='https://script.google.com/macros/s/AKfycbyY5umHbCw4pkozH-MjdaDn4rGxqlkskd984uKT7mO6pSuA9_6pFtUOKpuzOtNSZXo53g/exec'; 
     let form = document.querySelector('#form');
     form.addEventListener("submit",(e)=>{
@@ -512,15 +522,26 @@
             console.log(finalRes);
         });
     });
-</script>
 
+    function saveDataToGoogleSheet(data) {
+  // Set up the Google Sheets API
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  
+  // Set the range to write the data to
+  var range = sheet.getRange(sheet.getLastRow() + 1, 1, data.length, data[0].length);
+  
+  // Write the data to the sheet
+  range.setValues(data);
+}
+
+
+</script>
+<script src="assets/js/index.js"></script>
 <script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="assets/plugins/testimonial/js/owl.carousel.min.js"></script>
-<script src="assets/js/script.js">
-
-</script>
+<script src="assets/js/script.js"></script>
 
 </html>
 
