@@ -19,7 +19,7 @@ const postMethod1 =()=>{
                                 <div class="serv-cove shadow-md rounded bg-white p-3">
                                      <div class="prf row mb-3">
                                          <div class="col-md-3">
-                                             <img class="rounded-pill" src="https://drive.google.com/uc?export=view&id=${data.cardData[i][0]}&export=view&authuser=0" alt="not available">
+                                             <img class="rounded-pill" src="${data.cardData[i][0]}" alt="not available">
                                          </div>
                                          <div class="col-md-9 align-self-center">
                                              <h6 class="mb-0 fw-bolder">${data.cardData[i][1]}</h6>
