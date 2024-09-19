@@ -15,8 +15,7 @@ const postMethod1 =()=>{
         postElement1.classList.add('col-lg-4');
         postElement1.classList.add('col-md-6');
         postElement1.classList.add('mb-4');
-        postElement1.innerHTML=`
-                                <div class="serv-cove shadow-md rounded bg-white p-3">
+        postElement1.innerHTML=`<div class="serv-cove shadow-md rounded bg-white p-3">
                                      <div class="prf row mb-3">
                                          <div class="col-md-3">
                                              <img class="rounded-pill" src="${data.cardData[i][0]}" alt="not available">
