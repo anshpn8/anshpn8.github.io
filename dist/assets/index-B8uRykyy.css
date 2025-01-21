@@ -97,7 +97,7 @@ a {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 800%;
+    height: 700px;
 }
 
 .chat-header {
