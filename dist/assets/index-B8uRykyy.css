@@ -92,12 +92,12 @@ a {
 .chatbot-container {
     width: 400px;
     margin: 50px auto;
-    border: 5px solid #180c4b;
+    border: 5px solid #04111f;
     border-radius: 5px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 100%;
 }
 
 .chat-header {
@@ -139,10 +139,10 @@ a {
 }
 
 .chat-input {
-    background-color: #050847;
+    background-color: #04111f;
     padding: 10px;
     border-top: 1px solid #ccc;
-    display: flex
+    display: flex;
 }
 
 .chat-input input {
@@ -152,6 +152,7 @@ a {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 5px;
+    color: #04111f;
 }
 
 .chat-input button {
