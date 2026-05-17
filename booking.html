@@ -1,279 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form & Submissions Calendar</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
-    
- <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-    body {
-        background-color: #f4f6f9;
-        padding: 20px;
-    }
+    <!-- FullCalendar CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css"
+        rel="stylesheet"
+    />
 
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        max-width: 1400px;
-        margin: 0 auto;
-        height: calc(100vh - 100px);
-        min-height: 600px;
-    }
-
-    /* Form Side */
-    .form-section {
-        flex: 1;
-        background: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-section iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 4px;
-    }
-
-    /* Calendar Side */
-    .calendar-section {
-        flex: 1;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-    }
-
-    /* Highlighted Day Tile (Cell Background) in Light Red */
-    .fc-day-booked {
-        background-color: #ffebee !important; /* Soft, light red background */
-    }
-
-    /* Custom Style for the "Booked" Text Event */
-    .fc-event.booked-event {
-        background-color: #d9534f !important; /* Darker red badge */
-        border-color: #d43f3a !important;
-        color: white !important;
-        text-align: center;
-        font-weight: bold;
-        font-size: 0.85em;
-        padding: 2px 0;
-        border-radius: 4px;
-        cursor: default;
-    }
-
-    /* --- MOBILE RESPONSIVE OVERRIDES --- */
-    @media (max-width: 900px) {
         body {
-            padding: 10px; /* Reduces page spacing for mobile screens */
+            background-color: #f4f6f9;
+            padding: 20px;
         }
 
         h2 {
-            font-size: 1.35rem;
-            margin-bottom: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         .container {
             display: flex;
-            flex-direction: column-reverse; /* Flips the order: Calendar on top, Form on bottom */
-            height: auto; /* Removes the screen-height restriction */
-            min-height: unset;
-            gap: 15px;
+            flex-direction: row;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: calc(100vh - 100px);
+            min-height: 600px;
         }
 
-        .form-section, .calendar-section {
-            flex: none;
-            width: 100%;
-            height: 550px; /* Provides ideal scrolling height on mobile */
-            padding: 12px;
-        }
-
-        /* Adjust the calendar font and header sizes on mobile */
-        .fc .fc-toolbar {
+        /* Form Side */
+        .form-section {
+            flex: 1;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 15px;
         }
 
-        .fc .fc-toolbar-title {
-            font-size: 1.15rem !important;
+        .form-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Calendar Side */
+        .calendar-section {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        /* Highlight booked day */
+        .fc-day-booked {
+            background-color: #ffebee !important;
+        }
+
+        /* Booked event badge */
+        .fc-event.booked-event {
+            background-color: #d9534f !important;
+            border-color: #d43f3a !important;
+            color: white !important;
             text-align: center;
+            font-weight: bold;
+            font-size: 0.85em;
+            padding: 2px 0;
+            border-radius: 4px;
+            cursor: default;
         }
 
-        .fc .fc-button {
-            padding: 5px 10px !important;
-            font-size: 0.85rem !important;
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            body {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+                margin-bottom: 15px;
+            }
+
+            .container {
+                flex-direction: column-reverse;
+                height: auto;
+                min-height: unset;
+                gap: 15px;
+            }
+
+            .form-section,
+            .calendar-section {
+                width: 100%;
+                height: 550px;
+                padding: 12px;
+            }
+
+            .fc .fc-toolbar {
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+
+            .fc .fc-toolbar-title {
+                font-size: 1.15rem !important;
+                text-align: center;
+            }
+
+            .fc .fc-button {
+                padding: 5px 10px !important;
+                font-size: 0.85rem !important;
+            }
         }
-    }
-</style>
+    </style>
 </head>
+
 <body>
 
     <h2>Ertiga Car Booking</h2>
 
     <div class="container">
+
+        <!-- Google Form -->
         <div class="form-section">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenJhmCoo6HXwa3KmnW_8dfT9gMNVvs-bibV9j-oOSVVd3x9Q/viewform?embedded=true" width="640" height="1258" frameborder="0" marginheight="0" marginwidth="0">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSenJhmCoo6HXwa3KmnW_8dfT9gMNVvs-bibV9j-oOSVVd3x9Q/viewform?embedded=true"
+                loading="lazy">
                 Loading…
             </iframe>
         </div>
 
+        <!-- Calendar -->
         <div class="calendar-section">
             <div id="calendar"></div>
         </div>
+
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+    <!-- FullCalendar JS -->
+   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 
-    <script>
-        const SHEET_ID = '1aJ2DjxuRBZHkVFl20LUFlNAosetKpZ5-oJRkOLE3MAQ'; 
-        const DATE_COLUMN_NAME = 'Date'; 
+<script>
+const SHEET_ID = '1aJ2DjxuRBZHkVFl20LUFlNAosetKpZ5-oJRkOLE3MAQ';
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            
-            // Initialize Calendar
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth'
-                },
-                height: '100%',
-                events: [],
-                
-                // Colors the whole date cell if it matches a booked date
-dayCellClassNames: function(arg) {
-    let d = arg.date;
-    let year = d.getFullYear();
-    let month = String(d.getMonth() + 1).padStart(2, '0');
-    let day = String(d.getDate()).padStart(2, '0');
-    let formattedCellDate = `${year}-${month}-${day}`;
+document.addEventListener('DOMContentLoaded', function () {
 
-    if (window.bookedDates && window.bookedDates.includes(formattedCellDate)) {
-        return ['fc-day-booked'];
-    }
-    return [];
-}
-            });
+    const calendarEl = document.getElementById('calendar');
 
-            calendar.render();
+    // Global booked dates array
+    window.bookedDates = [];
 
-            // Setup global Google callback to process the incoming JSON without CORS blocks
-            window.google = {
-                visualization: {
-                    Query: {
-                        setResponse: function(data) {
-                            processSheetData(data);
-                        }
-                    }
-                }
-            };
+    // Initialize FullCalendar
+    const calendar = new FullCalendar.Calendar(calendarEl, {
 
-            // Global array to keep track of matched booked dates for background styles
-            window.bookedDates = [];
+    timeZone: 'local',
 
-            function processSheetData(data) {
-                const cols = data.table.cols;
-                let dateColIndex = -1;
-                for (let i = 0; i < cols.length; i++) {
-                    if (cols[i].label === DATE_COLUMN_NAME) {
-                        dateColIndex = i;
-                        break;
-                    }
-                }
+    initialView: 'dayGridMonth',
 
-                if (dateColIndex === -1) {
-                    console.error(`Column named '${DATE_COLUMN_NAME}' not found!`);
-                    return;
-                }
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth'
+        },
 
-                const fetchedEvents = [];
-                const rows = data.table.rows;
+        height: '100%',
 
-                // Today's date in local time string format for comparison (YYYY-MM-DD)
-                let today = new Date();
-                let year = today.getFullYear();
-                let month = String(today.getMonth() + 1).padStart(2, '0');
-                let day = String(today.getDate()).padStart(2, '0');
-                let todayStr = `${year}-${month}-${day}`;
+        events: [],
 
-                // Reset the global booked dates array
-                window.bookedDates = [];
+        // Highlight booked dates
+        dayCellClassNames: function (arg) {
 
-                rows.forEach(row => {
-                    const cell = row.c[dateColIndex];
-                    if (cell) {
-                        let formattedDate = '';
+            const d = arg.date;
 
-                        if (cell.f) {
-                            let parts = cell.f.split('/');
-                            if (parts.length === 3) {
-                                let m = parts[0].padStart(2, '0');
-                                let d = parts[1].padStart(2, '0');
-                                let y = parts[2];
-                                formattedDate = `${y}-${m}-${d}`;
-                            }
-                        } 
-                        else if (cell.v && typeof cell.v === 'string' && cell.v.includes('Date')) {
-                            const match = cell.v.match(/\d+/g);
-                            if (match) {
-                                let y = match[0];
-                                let m = (parseInt(match[1]) + 1).toString().padStart(2, '0');
-                                let d = match[2].zfill(2);
-                                formattedDate = `${y}-${m}-${d}`;
-                            }
-                        }
+            const formatted =
+                d.getFullYear() + '-' +
+                String(d.getMonth() + 1).padStart(2, '0') + '-' +
+                String(d.getDate()).padStart(2, '0');
 
-                        // Filter: Matches only today or dates in the future
-                        if (formattedDate && formattedDate >= todayStr) {
-                            window.bookedDates.push(formattedDate);
-                            
-                            fetchedEvents.push({
-                                title: 'Booked',
-                                start: formattedDate,
-                                className: 'booked-event'
-                            });
-                        }
-                    }
-                });
-
-                // Clear previous events and render the new ones
-                calendar.removeAllEvents();
-                calendar.addEventSource(fetchedEvents);
-
-                // Re-render the calendar to apply the updated cell backgrounds
-                calendar.render();
+            if (window.bookedDates.includes(formatted)) {
+                return ['fc-day-booked'];
             }
 
-            // Inject script tag directly to fetch the Google sheet data without a CORS block
-            const script = document.createElement('script');
-            script.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq`;
-            document.body.appendChild(script);
+            return [];
+        }
+    });
+
+    calendar.render();
+
+    // Google Sheets callback
+    window.google = {
+        visualization: {
+            Query: {
+                setResponse: function (data) {
+                    processSheetData(data);
+                }
+            }
+        }
+    };
+
+    // Process Google Sheet data
+    function processSheetData(data) {
+
+        console.log("FULL RESPONSE:", data);
+
+        const rows = data.table.rows;
+
+        if (!rows || rows.length === 0) {
+            console.error("No rows found");
+            return;
+        }
+
+        // First column contains date/timestamp
+        const dateColIndex = 4;
+
+        const fetchedEvents = [];
+
+        // Today's date
+        const today = new Date();
+
+        const todayStr =
+            today.getFullYear() + '-' +
+            String(today.getMonth() + 1).padStart(2, '0') + '-' +
+            String(today.getDate()).padStart(2, '0');
+
+        // Reset booked dates
+        window.bookedDates = [];
+
+        rows.forEach(row => {
+
+            const cell = row.c[dateColIndex];
+
+            if (!cell) return;
+
+            let formattedDate = '';
+
+            // Handle formatted date/time from Google Sheets
+         if (cell.f) {
+
+    // Example:
+    // "5/17/2026 18:32:47"
+
+    const datePart = cell.f.split(' ')[0];
+
+    const parts = datePart.split('/');
+
+    if (parts.length === 3) {
+
+        const month = parts[0].padStart(2, '0');
+        const day = parts[1].padStart(2, '0');
+        const year = parts[2];
+
+        formattedDate = `${year}-${month}-${day}`;
+    }
+}
+            // Handle raw Google Date object
+            else if (
+                typeof cell.v === 'string' &&
+                cell.v.includes('Date')
+            ) {
+
+                const match = cell.v.match(/\d+/g);
+
+                if (match) {
+
+                    const y = match[0];
+                    const m = String(parseInt(match[1]) + 1).padStart(2, '0');
+                    const d = String(match[2]).padStart(2, '0');
+
+                    formattedDate = `${y}-${m}-${d}`;
+                }
+            }
+
+            console.log("Parsed Date:", formattedDate);
+
+            // Add future/today bookings
+            if (formattedDate && formattedDate >= todayStr) {
+
+                window.bookedDates.push(formattedDate);
+
+fetchedEvents.push({
+    title: 'Booked',
+    start: formattedDate + 'T12:00:00',
+    allDay: true,
+    className: 'booked-event'
+});
+            }
         });
-    </script>
+
+        console.log("Events:", fetchedEvents);
+
+        // Refresh calendar events
+        calendar.removeAllEvents();
+        calendar.addEventSource(fetchedEvents);
+
+        // Re-render for background highlight updates
+        calendar.render();
+    }
+
+    // Fetch Google Sheet data
+    const script = document.createElement('script');
+
+    script.src =
+        `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=responseHandler:google.visualization.Query.setResponse`;
+
+    document.body.appendChild(script);
+});
+</script>
 </body>
 </html>
